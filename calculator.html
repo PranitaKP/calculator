@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Simple Calculator</title>
+<script language="javascript">
+var input_data="";
+function compute(value)
+{
+input_data=input_data+value;
+document.Calculator.txt1.value=input_data;
+}
+</script>
+</head>
+<body>
+<center>
+<table border="5" bgcolor="gray" bordercolor="red" height="300" width="200">
+<form name="Calculator">
+<p><br><br>
+<!--<em>Note that this is the simple calculator for performing the basic arithmatic
+operations</em>-->
+</p>
+<th>CALCULATOR</th>
+<tr align="center">
+<td>
+<input type="text" name="txt1" maxlength="10" size="25">
+</td>
+</tr>
+<tr align="center"><td>
+<input type="button" value="1" onclick="compute('1')">
+<input type="button" value="2" onclick="compute('2')">
+<input type="button" value="3" onclick="compute('3')">
+</td></tr>
+<tr align="center"><td>
+<input type="button" value="4" onclick="compute('4')">
+<input type="button" value="5" onclick="compute('5')">
+<input type="button" value="6" onclick="compute('6')">
+</td></tr>
+<tr align="center"><td>
+<input type="button" value="7" onclick="compute('7')">
+<input type="button" value="8" onclick="compute('8')">
+<input type="button" value="9" onclick="compute('9')">
+</td></tr>
+
+<tr align="center"><td>
+<input type="button" value="0" onclick="compute('0')">
+<input type="button" value="clear" onclick="txt1.value=' ';input_data=' '">
+<input type="button" value="=" onclick="txt1.value=eval(input_data);">
+</td></tr>
+<tr align="center"><td>
+<input type="button" value="+" onclick="compute('+')">
+<input type="button" value="-" onclick="compute('-')">
+<input type="button" value="/" onclick="compute('/')">
+<input type="button" value="*" onclick="compute('*')">
+</td></tr>
+</form>
+</table>
+</body>
+</html>
